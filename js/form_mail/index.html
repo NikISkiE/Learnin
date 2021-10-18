@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Zadanie</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<section id="nl"><h3>Imie I nazwisko</h3></section>
+		<section id="nr">LOGO</section>
+		<section id="ml">
+			<form method="POST" name="form1" onsubmit="formularz();return false">
+				<fieldset id="f1">
+					<legend>dane</legend>
+					<table>
+						<tr>
+							<td>Imie:</td>
+							<td><input type="text" name="imie" id="imie"/></td>
+						</tr>
+						<tr>
+							<td>Nazwisko:</td>
+							<td><input type="text" name="surname" id="surname"/></td>
+						</tr>
+						<tr>
+							<td>Wiek:</td>
+							<td><input type="number" name="age" id="age"/></td>
+						</tr>
+					</table>
+				</fieldset>
+				<fieldset id="f2">
+					<legend>adres</legend>
+					<table>
+						<tr>
+							<td>Miasto:</td>
+							<td><input type="text" name="city" id="city"/></td>
+						</tr>
+						<tr>
+							<td>Kod. Poczt:</td>
+							<td><input type="text" name="pcode" id="pcode" pattern="^[0-9]{2}-[0-9]{3}$"/></td>
+						</tr>
+						<tr>
+							<td>Ulica:</td>
+							<td><input type="text" name="street" id="street"/></td>
+						</tr>
+					</table>
+				</fieldset>
+				<center><input type="submit" id="button" value="Wyślij"/></center>
+				<center><i id="wynik"></i></center>
+			</form>
+		</section>
+		<section id="mr">
+		<fieldset>
+				<legend>Zawartosc Foldera zamowienia</legend>
+			</fieldset>
+		</section>
+		<section id="f">
+		</section>
+		<script type="text/javascript" src="script.js"></script>
+	</body>
+</html>
