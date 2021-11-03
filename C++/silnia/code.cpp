@@ -20,6 +20,13 @@ int petla(int n){
 	return w;
 }
 
+bool firstN(int n){
+	if(n==2||n==5||n==3||n%2 && n%3&& n%5){
+		return true;
+	}else{
+		return false;
+	}
+}
 
 int main(int argc, char** argv){
 	int n;
