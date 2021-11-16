@@ -1,8 +1,11 @@
 #include <iostream>
 using namespace std;
 
+//Zmienna z wartościami pola
 char pola[10]={'0','1','2','3','4','5','6','7','8','9'};
 
+
+// wywołanie wygrana() i tablica() by mozna było je umiescić w int main
 int wygrana();
 void tablica();
 
@@ -10,15 +13,20 @@ int main(){
 	int gracz = 1,i,wybur;
 	
 	char zaznaczenie;
+	//skrypt gry
 	do{
 		tablica();
+		// decydowanie który gracz ma teraz swoją kolej
 		gracz=(gracz%2)?1:2;
 		
 		cout << "Gracz " << gracz << " , wprowadż liczbe: ";
 		cin >> wybur;
 		
+		// przypisanie odpowiedniemu graczowi O albo X
 		zaznaczenie=(gracz == 1)?'X':'O';
 		
+		
+		// wypisanie na planszy wyboru gracza
 		if(wybur == 1 && pola[1] == '1'){
 			pola[1]=zaznaczenie;
 		}else if(wybur == 2 && pola[2]=='2'){
@@ -45,10 +53,11 @@ int main(){
 			cin.get();
 			
 		}
-		
+		// przypisanie warunku wygranej do wartości i
 		i=wygrana();
 		
 		gracz++;
+		//skrypt sprawdzający czy warunek wygranejjest spełniony
 	}while(i==-1);
 	tablica();
 	if(i==1){
@@ -69,6 +78,7 @@ int main(){
 
 
 int wygrana(){
+	//skrypt sprawdzający warunek wygranej
     if (pola[1] == pola[2] && pola[2] == pola[3])
 
         return 1;
@@ -93,6 +103,7 @@ int wygrana(){
     else if (pola[3] == pola[5] && pola[5] == pola[7])
 
         return 1;
+	//remis
     else if (pola[1] != '1' && pola[2] != '2' && pola[3] != '3' 
                     && pola[4] != '4' && pola[5] != '5' && pola[6] != '6' 
                   && pola[7] != '7' && pola[8] != '8' && pola[9] != '9')
@@ -103,6 +114,7 @@ int wygrana(){
 }
 
 void tablica(){
+	// wykonanie planszy graficznej
 	system("cls");
 	cout << "\n\nKolko i krzyzyk\n\n" << endl;
 	
