@@ -1,0 +1,4 @@
+SELECT imie,telefon,szczepienie,opis FROM zwierzeta;
+SELECT id,imie,wlasciciel FROM zwierzeta WHERE rodzaj=1;
+SELECT zwierzeta.imie,uslugi.nazwa FROM zwierzeta,uslugi WHERE zwierzeta.usluga_id=uslugi.id;
+SELECT AVG(cena) FROM uslugi;
