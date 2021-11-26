@@ -1,0 +1,50 @@
+h1{
+	margin-top:0;
+}
+header{
+    background-color: #40271a;
+    color: white;
+    font-family: Tahoma;
+    text-align: center;
+    height: 80px;
+}
+
+article{
+    float: left;
+    background-color: #dbb29c;
+    width: 40%;
+    height: 700px;
+}
+
+aside {
+    float: left;
+    background-color: #ffe3d4;
+    width: 60%;
+    height: 700px;
+}
+
+footer {
+    background-color: #40271a;
+    color: white;
+    text-align: right;
+	clear:booth;
+}
+table, td, tr, th
+{
+    border: 1px dashed brown;
+    width: 500px;
+    margin: 10px;
+    text-align: center;
+}
+img
+{
+    padding: 30px;
+}
+ol
+{
+ list-style: upper-roman;
+}
+
+body {
+    margin: 0px;
+}

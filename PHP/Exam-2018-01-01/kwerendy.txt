@@ -1,0 +1,13 @@
+Zapytanie 1:SELECT `id`,`tytul`,`tresc` FROM `ogloszenie` WHERE kategoria = 1
+
+Zapytanie 2: SELECT uzytkownik.telefon FROM uzytkownik JOIN ogloszenie ON uzytkownik.id = ogloszenie.uzytkownik_id 
+WHERE ogloszenie.id=1
+
+Zapytanie 3:
+CREATE USER 'moderator'@'localhost' IDENTIFIED BY 'qwerty'
+
+Zapytanie 4:
+GRANT DELETE,SELECT ON ogloszenia.* TO 'moderator'@'localhost';
+
+SKLEJANIE TABEL LEWOSTRONNE
+SELECT * FROM `uzytkownik` LEFT JOIN ogloszenie ON uzytkownik.id = ogloszenie.uzytkownik_id WHERE 1
